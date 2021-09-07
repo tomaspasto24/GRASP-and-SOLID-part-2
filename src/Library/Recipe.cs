@@ -25,6 +25,19 @@ namespace Full_GRASP_And_SOLID.Library
             this.steps.Remove(step);
         }
 
+        /// <summary>
+        /// Se crea el metodo para poder acceder desde otra clase al array de pasos de Recipe.
+        /// </summary>
+        /// <returns>Array de pasos</returns>
+        public ArrayList GetSteps()
+        { 
+            return steps;
+        }
+
+        // La clase receta no debería tener la responsabilidad de imprimirse a si misma, para esto se crea la clase
+        // ConsolePrinter la cual basándose en la clase Recipe la imprime en consola.
+
+        /*
         public void PrintRecipe()
         {
             Console.WriteLine($"Receta de {this.FinalProduct.Description}:");
@@ -34,5 +47,6 @@ namespace Full_GRASP_And_SOLID.Library
                     $"usando '{step.Equipment.Description}' durante {step.Time}");
             }
         }
+        */
     }
 }
